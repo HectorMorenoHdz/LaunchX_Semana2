@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La rebanada perfecta | Alta reposteria</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Candara, Geneva, Tahoma, sans-serif;
+        }
+
+        /* Estilo de header */
+        header {
+            background-color: #fcffe2;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: #abb94f;
+        }
+
+        /* Crear 2 columnas con la misma posición en la fila */
+        nav {
+            float: left;
+            width: 20%;
+            height: 500px;
+            /* only for demonstration, should be removed */
+            background: #abb94f;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 80%;
+            background-color: #e6f8e5;
+            height: auto;
+            color:darkblue;
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Estilo de footer */
+        footer {
+            background-color: #fcffe2;
+            padding: 10px;
+            text-align: center;
+            color: #abb94f;
+        }
+
+        
+        .container{
+            background-color: #fcffe2;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        
+        .item{
+            margin: 1em;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            color: #fcffe2;
+            float: left;
+        }
+
+        .logo
+        {
+            width: 15%;
+        }
+
+        .titulo
+        {
+            width: 75%;
+        } 
+
+        h1
+        {
+            color: #abb94f;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+
+        .name
+        {
+            font-weight: bold;
+        }
+        /* Responsive layout */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="item logo" id="logo">
+                <a href="./index.html"><img src="./assets/img/logo_small.png" height="150px"></a>
+            </div>
+            <div class="item titulo" id="titulo">
+                <h1>Pedido</h1>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href=".\sabores.html">Sabores</a></li>
+                <li><a href=".\decoracion.html">Decoración</a></li>
+                <li><a href=".\pedido.html">Pedido</a></li>
+                <li><a href=".\contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h2>Administracion del pastelero</h2>
+            <h3>Sabores</h3>
+            <br>
+            <table>
+                <tr>
+                    <th>Sabor</th>
+                    <th>Cantidad restante</th>
+                </tr>
+                <tr><td>Cajeta</td><td>10</td></tr>
+                <tr><td>Baileys</td><td>9</td></tr>
+                <tr><td>Alaska</td><td>15</td></tr>
+                <tr><td>Afro</td><td>5</td></tr>
+                <tr><td>Piñon</td><td>3</td></tr>
+            </table>
+            <h3>Decoraciones</h3>
+            <br>
+            <table>
+                <tr>
+                    <th>Decoracion</th>
+                    <th>Cantidad restante</th>
+                </tr>
+                <tr><td>Lavadora</td><td>5</td></tr>
+                <tr><td>Cientifico</td><td>4</td></tr>
+                <tr><td>Coroline</td><td>6</td></tr>
+                <tr><td>Cuarentas</td><td>5</td></tr>
+                <tr><td>Flores</td><td>7</td></tr>
+                <tr><td>Grogu</td><td>6</td></tr>
+                <tr><td>Harry Potter</td><td>7</td></tr>
+                <tr><td>Limon</td><td>1</td></tr>
+                <tr><td>Ole</td><td>6</td></tr>
+            </table>
+        </article>
+    </section>
+
+    <footer>
+        <table>
+            <tr>
+                <td style="width: 25%;">Sucursales</td>
+                <td style="width: 25%">
+                    <label for="Newsletter">Newsletter</label>
+                    <input type="text" id="Newsletter" name="Newsletter" placeholder="Suscribete, escribe tu e-mail">
+                    <input type="button" id="Subscribe" name="Subscribe" value="Ir" onclick="alert('¡Gracias por suscribirte!');">
+                </td>
+                <td style="width: 25%">Atencion al cliente</td>
+                <td style="width: 25%; text-align: right;">Siguenos
+                <!-- </td>
+                <td> -->
+                <img src="./assets/img/social.png" height="20px"> 
+            </td>
+            </tr>
+        </table>
+    </footer>
+
+</body>
+
+</html>

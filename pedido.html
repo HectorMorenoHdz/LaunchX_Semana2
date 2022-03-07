@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La rebanada perfecta | Alta reposteria</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Candara, Geneva, Tahoma, sans-serif;
+        }
+
+        /* Estilo de header */
+        header {
+            background-color: #fcffe2;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: #abb94f;
+        }
+
+        /* Crear 2 columnas con la misma posición en la fila */
+        nav {
+            float: left;
+            width: 20%;
+            height: 500px;
+            /* only for demonstration, should be removed */
+            background: #abb94f;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 80%;
+            background-color: #e6f8e5;
+            height: auto;
+            color:darkblue;
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Estilo de footer */
+        footer {
+            background-color: #fcffe2;
+            padding: 10px;
+            text-align: center;
+            color: #abb94f;
+        }
+
+        
+        .container{
+            background-color: #fcffe2;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        
+        .item{
+            margin: 1em;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            color: #fcffe2;
+            float: left;
+        }
+
+        .logo
+        {
+            width: 15%;
+        }
+
+        .titulo
+        {
+            width: 75%;
+        } 
+
+        h1
+        {
+            color: #abb94f;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+
+        .name
+        {
+            font-weight: bold;
+        }
+        /* Responsive layout */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="item logo" id="logo">
+                <a href="./index.html"><img src="./assets/img/logo_small.png" height="150px"></a>
+            </div>
+            <div class="item titulo" id="titulo">
+                <h1>Pedido</h1>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href=".\sabores.html">Sabores</a></li>
+                <li><a href=".\decoracion.html">Decoración</a></li>
+                <li><a href=".\pedido.html">Pedido</a></li>
+                <li><a href=".\contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h2>Realiza tu pedido</h2>
+            
+            <form action="/pedido.js" id="form1" method="post">
+                <h3>Escribe tus datos</h3>
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre"><br>
+
+                <label for="telfono">Telefono:</label>
+                <input type="tel" id="telfono" name="telfono"><br>
+
+                <label for="correo">Correo electronico:</label>
+                <input type="email" id="correo" name="correo"><br>
+                <br>
+                <h3>Selecciona tu(s) sabor(es)</h3>
+                <table>
+                    <tr>
+                        <th>Sabor 1</th>
+                        <th>Sabor 2</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" id="cajeta" name="sabor1" value="cajeta"><label for="cajeta">Cajeta</label><br>
+                            <input type="radio" id="baileys" name="sabor1" value="baileys"><label for="baileys">Baileys</label><br>
+                            <input type="radio" id="alaska" name="sabor1" value="alaska"><label for="alaska">Alaska</label><br>
+                            <input type="radio" id="afro" name="sabor1" value="afro"><label for="afro">Afro</label><br>
+                            <input type="radio" id="pinon" name="sabor1" value="pinon"><label for="pinon">Piñon</label><br>
+                        </td>
+                        <td>
+                            <input type="radio" id="cajeta" name="sabor2" value="cajeta"><label for="cajeta">Cajeta</label><br>
+                            <input type="radio" id="baileys" name="sabor2" value="baileys"><label for="baileys">Baileys</label><br>
+                            <input type="radio" id="alaska" name="sabor2" value="alaska"><label for="alaska">Alaska</label><br>
+                            <input type="radio" id="afro" name="sabor2" value="afro"><label for="afro">Afro</label><br>
+                            <input type="radio" id="pinon" name="sabor2" value="pinon"><label for="pinon">Piñon</label><br>
+                        </td>
+                    </tr>
+                </table>
+                <br><br>
+                <h3>Selecciona tu(s) decoracion(es)</h3>
+                <table>
+                    <tr>
+                        <th>Decoracion 1</th>
+                        <th>Decoracion 2</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" id="lavadora" name="decoracion1" value="lavadora"><label for="lavadora">Lavadora</label><br>
+                            <input type="radio" id="cientifico" name="decoracion1" value="cientifico"><label for="cientifico">Cientifico</label><br>
+                            <input type="radio" id="coroline" name="decoracion1" value="coroline"><label for="coroline">Coroline</label><br>
+                            <input type="radio" id="cuarentas" name="decoracion1" value="cuarentas"><label for="cuarentas">Cuarentas</label><br>
+                            <input type="radio" id="grogu" name="decoracion1" value="grogu"><label for="grogu">Grogu</label><br>
+                            <input type="radio" id="hp" name="decoracion1" value="hp"><label for="hp">Harry Potter</label><br>
+                            <input type="radio" id="limon" name="decoracion1" value="limon"><label for="limon">Limon</label><br>
+                            <input type="radio" id="ole" name="decoracion1" value="ole"><label for="ole">Ole</label><br>
+                            <input type="radio" id="flores" name="decoracion1" value="flores"><label for="flores">Flores</label><br>
+                        </td>
+                        <td>
+                            <input type="radio" id="lavadora" name="decoracion2" value="lavadora"><label for="lavadora">Lavadora</label><br>
+                            <input type="radio" id="cientifico" name="decoracion2" value="cientifico"><label for="cientifico">Cientifico</label><br>
+                            <input type="radio" id="coroline" name="decoracion2" value="coroline"><label for="coroline">Coroline</label><br>
+                            <input type="radio" id="cuarentas" name="decoracion2" value="cuarentas"><label for="cuarentas">Cuarentas</label><br>
+                            <input type="radio" id="grogu" name="decoracion2" value="grogu"><label for="grogu">Grogu</label><br>
+                            <input type="radio" id="hp" name="decoracion2" value="hp"><label for="hp">Harry Potter</label><br>
+                            <input type="radio" id="limon" name="decoracion2" value="limon"><label for="limon">Limon</label><br>
+                            <input type="radio" id="ole" name="decoracion2" value="ole"><label for="ole">Ole</label><br>
+                            <input type="radio" id="flores" name="decoracion2" value="flores"><label for="flores">Flores</label><br>
+                        </td>
+                    </tr>
+                </table>
+
+                <h3>Tienes alguna indicacion adicional, escribela aqui: </h3>
+                <label for="descrip">Descripcion adicional:</label>
+                <input type="text" id="descrip" name="descrip"><br>
+                <br>
+
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpia campos"">
+            </form>
+        </article>
+    </section>
+
+    <footer>
+        <table>
+            <tr>
+                <td style="width: 25%;">Sucursales</td>
+                <td style="width: 25%">
+                    <label for="Newsletter">Newsletter</label>
+                    <input type="text" id="Newsletter" name="Newsletter" placeholder="Suscribete, escribe tu e-mail">
+                    <input type="button" id="Subscribe" name="Subscribe" value="Ir" onclick="alert('¡Gracias por suscribirte!');">
+                </td>
+                <td style="width: 25%">Atencion al cliente</td>
+                <td style="width: 25%; text-align: right;">Siguenos
+                <!-- </td>
+                <td> -->
+                <img src="./assets/img/social.png" height="20px"> 
+            </td>
+            </tr>
+        </table>
+    </footer>
+
+</body>
+
+</html>

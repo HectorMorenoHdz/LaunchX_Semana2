@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La rebanada perfecta | Alta reposteria</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Candara, Geneva, Tahoma, sans-serif;
+        }
+
+        /* Estilo de header */
+        header {
+            background-color: #fcffe2;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: #abb94f;
+        }
+
+        /* Crear 2 columnas con la misma posición en la fila */
+        nav {
+            float: left;
+            width: 20%;
+            height: 300px;
+            /* only for demonstration, should be removed */
+            background: #abb94f;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 80%;
+            background-color: #e6f8e5;
+            height: 300px;
+            color:darkblue;
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Estilo de footer */
+        footer {
+            background-color: #fcffe2;
+            padding: 10px;
+            text-align: center;
+            color: #abb94f;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="./assets/img/Logo full.png" height="150px">
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href=".\sabores.html">Sabores</a></li>
+                <li><a href=".\decoracion.html">Decoración</a></li>
+                <li><a href=".\pedido.html">Pedido</a></li>
+                <li><a href=".\contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>La rebanada perfecta</h1>
+            <p>Somos una empresa dedicada a la elaboración de pasteles con los mejores ingredientes, cuidamos minuciosamente cada ingrediente para ofrecer solo productos de alta calidad.</p>
+            <p>Cada pastel es revisado a detalle para que sea perfecto, la presentación es iconica en nuestra marca.</p>
+            <p>La rebanada perfecta, desde 1978. Empresa orgullosamente mexicana.</p>
+        </article>
+    </section>
+
+    <footer>
+        <table>
+            <tr>
+                <td style="width: 25%;">Sucursales</td>
+                <td style="width: 25%">
+                    <label for="Newsletter">Newsletter</label>
+                    <input type="text" id="Newsletter" name="Newsletter" placeholder="Suscribete, escribe tu e-mail">
+                    <input type="button" id="Subscribe" name="Subscribe" value="Ir" onclick="alert('¡Gracias por suscribirte!');">
+                </td>
+                <td style="width: 25%">Atencion al cliente</td>
+                <td style="width: 25%; text-align: right;">Siguenos
+                <!-- </td>
+                <td> -->
+                <img src="./assets/img/social.png" height="20px"> 
+            </td>
+            </tr>
+        </table>
+    </footer>
+
+</body>
+
+</html>
